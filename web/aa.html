@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Circular Progress Bar</title>
+<style>
+  .progress-circle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: conic-gradient(
+      #4d5bf9 0%,
+      #4d5bf9 75%, /* Adjust this value to set the progress */
+      #cadcff 75%,
+      #cadcff 100%
+    );
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: Arial, sans-serif;
+  }
+  .progress-text {
+    font-size: 20px;
+    color: #333;
+  }
+</style>
+</head>
+<body>
+<div class="progress-circle">
+  <div class="progress-text">75%</div>
+</div>
+
+<script>
+  // JavaScript to dynamically update the progress
+  const progressText = document.querySelector('.progress-text');
+  let progressValue = 0;
+  const interval = setInterval(() => {
+    if (progressValue >= 95) { // Set your target progress value here
+      clearInterval(interval);
+    } else {
+      progressValue++;
+      progressText.textContent = `${progressValue}%`;
+      document.querySelector('.progress-circle').style.background = `conic-gradient(
+        #4d5bf9 0%,
+        #4d5bf9 ${progressValue}%, 
+        #cadcff ${progressValue}%,
+        #cadcff 100%
+      )`;
+    }
+  }, 100);
+</script>
+</body>
+</html>

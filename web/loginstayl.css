@@ -1,0 +1,97 @@
+.container {
+    position: absolute;
+    background-color: rgba(9, 104, 133, 0.4);
+    backdrop-filter: blur(10px);
+    width: 423px;
+    height: 600px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50px;
+    border: 2px rgba(9, 104, 133, 0.4) solid;
+    box-shadow: 11px 10px 20px;
+    display: flex; /* Use flexbox */
+    flex-direction: column; /* Stack children vertically */
+    justify-content: center; /* Center children vertically */
+    align-items: center; /* Center children horizontally */
+}
+
+body {
+    background-image: url(akira-hojo-ZxGdri2EWzk-unsplash.jpg);
+    background-size:auto;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+}
+
+h1 {
+    text-align: center;
+}
+
+
+
+input {
+    border: 2px solid black;
+    width: 200px;
+    height: 28px;
+    border-radius: 10px;
+}
+
+label {
+    font-size: large;
+    font-weight: 600;
+    display: flex; /* Use flexbox */
+    align-items: center; /* Center children vertically */
+    margin-bottom: 10px;
+}
+
+button {
+    width: 100px;
+    height: 40px;
+    border-radius: 12px;
+    background-color: aliceblue;
+    font-size: medium;
+    font-weight: 800;
+}
+.button:hover {
+    font-weight: 900; /* Increases font weight to bold */
+    background-color: rgba(26, 126, 241, 0.3); /* Changes background color */
+    font-size: larger; /* Increases font size */
+}
+
+
+
+.Sign{
+    width: 93px;
+    height: 33px;
+    border-radius: 12px;
+    background-color: aliceblue;
+    font-size: large;
+    font-weight:bold;
+    border: 2px solid;
+    text-align: center;
+    position: relative;
+    left: -80px;
+    top: 3px;
+    text-decoration: none;
+}
+.Sign:hover{
+    font-weight: 900; /* Increases font weight to bold */
+    background-color: rgba(26, 126, 241, 0.3); /* Changes background color */
+    font-size: larger; /* Increases font size */
+}
+@media only screen and (max-width: 768px) {
+    .container {
+        width: 80%; /* Adjust the width for smaller screens */
+        height: auto; /* Allow height to adjust based on content */
+        border-radius: 20px; /* Decrease border radius for smaller container */
+    }
+
+    input {
+        width: 80%; /* Adjust input width for smaller screens */
+    }
+
+    button {
+        width: 80%; /* Adjust button width for smaller screens */
+    }
+}

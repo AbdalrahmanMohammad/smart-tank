@@ -1,0 +1,164 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-image: url( '/web/stacked-waves-haikei.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.navbar {
+    
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    width: 57px;
+    border-radius: 21px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 20px;
+}
+
+.nav-links li a {
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links li a:hover {
+    color: #FFA500;
+}
+
+.burger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.line {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 3px;
+}
+.main-content {
+    padding: 20px; /* Adjust padding as needed */
+    background-color: #f9f9f9; /* Example background color */
+    border: 2px solid #ddd; /* Example border */
+    border-radius: 10px; /* Example border radius */
+    height: 100vh; /* Make the height equal to the viewport height */
+    width: 100%; /* Make the width 100% of the viewport */
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+}
+.sidebar {
+    width: 200px; /* Adjust width as needed */
+    background-color: #f2f2f2; /* Example background color */
+    padding: 20px; /* Adjust padding as needed */
+    float: left; /* Align sidebar to the left */
+}
+
+.footer {
+    background-color: #333; /* Example background color */
+    color: #fff; /* Example text color */
+    text-align: center;
+    padding: 20px; /* Adjust padding as needed */
+    clear: both; /* Ensure footer clears both the main content and sidebar */
+}
+.main-container {
+    display: flex;
+}
+
+.sidebar {
+    width: 200px; /* Adjust width as needed */
+    background-color: #f2f2f2; /* Example background color */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.main-content {
+    flex: 1; /* Allow main content to grow and take up remaining space */
+    padding: 20px; /* Adjust padding as needed */
+}
+
+.footer {
+    /* Example background color */
+    color: #fff; /* Example text color */
+    text-align: center;
+    padding: 20px; /* Adjust padding as needed */
+}
+
+
+section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 400px;
+    padding-top: 100px;
+   
+}
+.curve {
+    position: absolute;
+    height: 250px;
+    width: 100%;
+    bottom: 0;
+    text-align: center;
+}
+
+.curve::before {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    transform: translate(85%, 60%);
+    background-color: hsl(216, 21%, 16%);
+}
+
+.curve::after {
+    content: '';
+    display: block;
+    position: absolute;
+    border-radius: 100% 50%;
+    width: 55%;
+    height: 100%;
+    background-color: #3c31dd;
+    transform: translate(-4%, 40%);
+    z-index: -1;
+}
+  .card{
+    width: 250px;
+    height: 250px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: url( '/F/blurry-gradient-haikei.svg' );;
+    border: 2px solid;
+    border-radius: 50%;
+    font-size: x-large;
+    font-weight: bolder;
+    text-transform: uppercase;
+    font-family: 'Courier New', Courier, monospace;
+  }
+@media screen and (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+    }
+}
+
