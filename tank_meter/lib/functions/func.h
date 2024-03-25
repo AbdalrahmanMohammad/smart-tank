@@ -32,8 +32,8 @@ void connect_wifi()
 
 void checkWifi() // checks wifi connection every 3 seconds and shows the condition on wifiLed
 {
-    if (millis() - wifiPrevious >= 3000UL) 
-    {                                     
+    if (millis() - wifiPrevious >= 3000UL)
+    {
         if (WiFi.status() == WL_CONNECTED)
         {
             digitalWrite(wifiLed, HIGH);
@@ -44,5 +44,26 @@ void checkWifi() // checks wifi connection every 3 seconds and shows the conditi
         }
 
         wifiPrevious = millis();
+    }
+}
+
+void sendReadings(float distance)
+{
+    if (WiFi.status() == WL_CONNECTED)
+    {
+        HTTPClient http;
+        int httpCode;
+
+        String LED_State = "";
+
+        postData = "distance="+String(distance);
+      
+        payload = "";
+        http.begin(client, "http://192.168.8.55/tank/web/php_codes/newReading.php");
+        http.addHeader("Content-Type", "application/x-www-form-urlencoded");
+        httpCode = http.POST(postData);
+        payload = http.getString(); // return nothing
+        http.end();
+
     }
 }

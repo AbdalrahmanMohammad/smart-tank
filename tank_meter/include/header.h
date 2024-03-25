@@ -21,3 +21,6 @@ int buzzer = D8;
 int wifiLed = D0;
 unsigned long wifiPrevious = 0;
 UltraSonicDistanceSensor ultrasonicSensor(TRIGGER_PIN, ECHO_PIN);
+
+String postData = "";
+String payload = "";

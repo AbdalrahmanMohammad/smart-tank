@@ -14,9 +14,10 @@ void loop()
 {
   checkWifi();
 
-
+float x=measure(30);
   Serial.print("Distance: ");
-  Serial.print(measure(30));
+  Serial.print(x);
+  sendReadings(x);
   Serial.println(" cm");
   for (int i = 1; i <= 10; i++)
   {
