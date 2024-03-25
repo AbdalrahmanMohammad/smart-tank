@@ -6,10 +6,15 @@ void setup()
   Serial.begin(9600);
   leds.init();
   pinMode(buzzer, OUTPUT);
+  pinMode(wifiLed, OUTPUT);
+  connect_wifi();
 }
 
 void loop()
 {
+  checkWifi();
+
+
   Serial.print("Distance: ");
   Serial.print(measure(30));
   Serial.println(" cm");
