@@ -1,18 +1,28 @@
-#include <Arduino.h>
+// Include the SPI library for communication with 74HC595
+#include <SPI.h>
 
-// put function declarations here:
-int myFunction(int, int);
+// Define the pins connected to 74HC595
+#define DATA_PIN D5    // Serial Data Input (DS)
+#define CLOCK_PIN D6   // Serial Clock Input (SH_CP)
+#define LATCH_PIN D7   // Storage Register Clock Input (ST_CP)
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+ 
+  pinMode(DATA_PIN, OUTPUT);
+  pinMode(CLOCK_PIN, OUTPUT);
+  pinMode(LATCH_PIN, OUTPUT);
+
+
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  // Toggle LEDs on and off
+  for(int i=0;i<=255;i++)
+  {
+ digitalWrite(LATCH_PIN,LOW);
+ shiftOut(DATA_PIN,CLOCK_PIN,LSBFIRST,i);
+ digitalWrite(LATCH_PIN,HIGH);
+ delay(50);
+  }
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
-}
