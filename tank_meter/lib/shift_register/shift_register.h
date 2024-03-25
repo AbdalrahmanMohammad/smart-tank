@@ -51,8 +51,10 @@ public:
         apply();
     }
 
-    void led(byte ledNumber, boolean state) // change the state of a specified LED
+    void controlLed(byte ledNumber, boolean state) // change the state of a specified LED
     {
+        if (ledNumber > 8 || ledNumber < 1)// just from 1 to 8
+            return;
         if (state)
             leds |= (1 << (ledNumber - 1)); // Set the bit representing the LED
         else
