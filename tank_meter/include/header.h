@@ -15,7 +15,7 @@ const char *ssid = "PL";
 const char *password = "87654321";
 
 ShiftRegister reg(D5, D6, D7);
-Led leds(&reg, D3, D4);
+Led leds(&reg, D4, D3);
 
 int buzzer = D8;
 int wifiLed = D0;
