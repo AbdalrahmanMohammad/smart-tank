@@ -28,4 +28,9 @@ String payload = "";
 float maxDistance = 18.7;
 float minDistance = 3.5;
 
-float previousReading=0;
+float previousReading = 0;
+
+boolean emptyLock = false;
+boolean fullLock = false;
+
+boolean firstRound = true;

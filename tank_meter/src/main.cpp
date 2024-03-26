@@ -15,9 +15,9 @@ void loop()
   checkWifi();
 
 float x=measure(30);
-  Serial.print("Distance: ");
-  Serial.print(x);
-  Serial.println(" cm");
+  // Serial.print("Distance: ");
+  // Serial.print(x);
+  // Serial.println(" cm");
   
   // sendReadings(x);
   controlLeds(x);
