@@ -48,7 +48,7 @@ void checkWifi() // checks wifi connection every 3 seconds and shows the conditi
     }
 }
 
-void sendReadings(float distance)
+void sendReadings(int percentage)
 {
     if (WiFi.status() == WL_CONNECTED)
     {
@@ -57,7 +57,7 @@ void sendReadings(float distance)
 
         String LED_State = "";
 
-        postData = "distance=" + String(distance);
+        postData = "percentage=" + String(percentage);
 
         payload = "";
         http.begin(client, "http://192.168.8.55/tank/web/php_codes/newReading.php");
@@ -123,6 +123,9 @@ void controlLeds(float distance)
 
         percantage = 10 - noOfOffLeds;
 
+        percantage = (percantage == 0) ? 1 : percantage;
+        percantage = (percantage == 10) ? 9 : percantage;
+
         for (int i = 10; i > 10 - noOfOffLeds; i--)
             leds.controlLed(i, LOW);
 
@@ -155,7 +158,8 @@ void controlLeds(float distance)
         digitalWrite(buzzer, LOW);
     }
 
-    Serial.println(percantage*10);
+    Serial.println(percantage * 10);
+    sendReadings(percantage * 10);
 
     previousReading = distance;
     firstRound = false;

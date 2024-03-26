@@ -12,17 +12,17 @@ try {
 
     if (!empty($_POST)) {
         // Keep track POST values
-        $distance = $_POST['distance'];
-        // $distance = "454.426";
+        $percentage = $_POST['percentage'];
+        // $percentage = "454.426";
         $time = $_POST['time'];
 
         // Prepare the SQL query
-        $query = "UPDATE readings SET distance = :distance, time = :time LIMIT 1"; // Assuming there's only one row in the table
+        $query = "UPDATE readings SET percentage = :percentage, time = :time LIMIT 1"; // Assuming there's only one row in the table
 
         $statement = $pdo->prepare($query);
 
         // Bind parameters
-        $statement->bindParam(':distance', $distance, PDO::PARAM_STR);
+        $statement->bindParam(':percentage', $percentage, PDO::PARAM_INT);
         $statement->bindParam(':time', $time);
 
         // Execute the query
