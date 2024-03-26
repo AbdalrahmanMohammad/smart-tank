@@ -50,6 +50,22 @@ void checkWifi() // checks wifi connection every 3 seconds and shows the conditi
 
 void sendReadings(int percentage)
 {
+    if (percentage == 0) // do not send more than one time in 10 seconds
+    {
+        if (millis() - previousEmpty < 10000)
+            return;
+
+        previousEmpty = millis();
+    }
+
+    if (percentage == 10) // do not send more than one time in 10 seconds
+    {
+        if (millis() - previousFull < 10000)
+            return;
+
+        previousFull = millis();
+    }
+
     if (WiFi.status() == WL_CONNECTED)
     {
         HTTPClient http;

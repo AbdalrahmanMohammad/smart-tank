@@ -34,3 +34,6 @@ boolean emptyLock = false;
 boolean fullLock = false;
 
 boolean firstRound = true;
+
+unsigned long previousEmpty = 0;
+unsigned long previousFull = 0;
