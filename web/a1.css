@@ -1,10 +1,11 @@
 body {
     margin: 0;
     font-family: Arial, sans-serif;
-    background-image: url( '/web/stacked-waves-haikei.svg');
+    background-image: url( '/tank/web/stacked-waves-haikei.svg');
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+    
 }
 
 .navbar {
@@ -38,7 +39,7 @@ body {
 }
 
 .nav-links li a:hover {
-    color: #FFA500;
+    color: #f8ce12;
 }
 
 .burger {
@@ -144,7 +145,7 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: url( '/F/blurry-gradient-haikei.svg' );;
+    background: url( '/web/blurry-gradient-haikei.svg' );;
     border: 2px solid;
     border-radius: 50%;
     font-size: x-large;
