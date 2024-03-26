@@ -24,3 +24,8 @@ UltraSonicDistanceSensor ultrasonicSensor(TRIGGER_PIN, ECHO_PIN);
 
 String postData = "";
 String payload = "";
+
+float maxDistance = 18.7;
+float minDistance = 3.5;
+
+float previousReading=0;
