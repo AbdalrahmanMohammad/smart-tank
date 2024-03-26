@@ -1,7 +1,7 @@
 <?php
 
 $name = "Smart tank";
-$email = "www.abdalrahman95.3@gmail.com";
+$email = "araedr2178@gmail.com";
 $subject = "water level";
 $message = "your tank is full now";
 

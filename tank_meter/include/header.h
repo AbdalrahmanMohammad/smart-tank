@@ -11,8 +11,8 @@
 #define ECHO_PIN D2
 
 WiFiClient client;
-const char *ssid = "PL";
-const char *password = "87654321";
+const char *ssid = "Ahmad";
+const char *password = "0597696688";
 
 ShiftRegister reg(D5, D6, D7);
 Led leds(&reg, D4, D3);
