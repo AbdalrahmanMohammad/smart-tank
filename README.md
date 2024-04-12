@@ -17,9 +17,7 @@ The system also maintains a log of the tank's states, recording both empty and f
 - **Email Notifications**: Sends prompt email notifications to users upon changes in tank status.
 
 ## Video for the Project
-
-[[Include a link to the video showcasing the Smart Tank Project in action, demonstrating its features and functionality.]
-](https://studio.youtube.com/video/EoJm9L6huuo/edit)
+https://www.youtube.com/watch?v=EoJm9L6huuo
 
 ## Important note
 I only did the microcontroller code and some PHP scripts database control. These components have been integrated with an existing website, which was previously developed. Additionally, I have created the physical model for the project.
